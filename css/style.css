@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root {
+  --blue-color: #3525af;
+  --purple-color: #9153c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(to right, var(--blue-color), var(--purple-color));
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4rem;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.resume {
+  width: 80rem;
+  background: #fff;
+  margin: 2.5rem auto;
+  display: flex;
+}
+
+.resume__left {
+  background: #292b2f;
+  width: 25rem;
+  padding: 0 2rem;
+}
+
+.resume__right {
+  width: calc(100% - 25rem);
+}
+
+.resume__left-photo {
+  text-align: center;
+  padding: 2rem 0;  
+}
+
+.resume__left-photo img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 3rem;
+}
+
+.pb {
+  padding-bottom: 2rem;
+}
+
+.resume__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  padding-bottom: 1rem;
+  color: var(--blue-color);
+  position: relative;
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.resume__title::before {
+  content: "";
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  width: 5rem;
+  height: 3px;
+  background: var(--blue-color);
+}
+
+.resume__icon {
+  font-size: 2rem;
+  color: var(--purple-color);
+}
+
+.resume__text {
+  color: var(--purple-color);
+  font-size: 1.4rem;
+}
+
+.resume__contact-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.resume__contact-item .resume__icon {
+  width: 4.6rem;
+  height: 4.6rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.resume__contact-item .resume__text {
+  width: calc(100% - 4.6rem);
+  word-break: break-word;
+  color: #fff;
+}
+
+.resume__skill ul,
+.resume__hobbie ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.resume__skill-item,
+.resume__hobbie-item {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume__skill-item {
+  background: #fff;
+}
+
+.resume__skill-item .resume__text,
+.resume__hobbie-item .resume__text {
+  margin-top: 0.5rem;
+}
+
+.resume__hobbie-item {
+  border: 2px solid #fff;
+  transition: background 0.3s;
+}
+
+.resume__hobbie-item .resume__icon,
+.resume__hobbie-item .resume__text {
+  color: #fff;
+}
+
+.resume__hobbie-item:hover {
+  background: #fff;
+}
+
+.resume__hobbie-item:hover .resume__icon,
+.resume__hobbie-item:hover .resume__text {
+  color: var(--purple-color);
+}
+
+.resume__header {
+  background: #292b2f;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  height: 24rem;
+}
+
+.resume__name-role .name {
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--blue-color);
+}
+
+.resume__name-role .role {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.resume__about {
+  margin-top: 2rem;
+  line-height: 2.4rem;
+}
+
+.resume__right-inner {
+  padding: 3rem;
+  color: #292b2f;
+}
+
+.resume__right-inner .resume__title {
+  margin-top: 3rem;
+}
+
+.resume__right-inner .resume__item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.resume__r-date {
+  width: 12.5rem;
+  color: var(--blue-color);
+}
+
+.resume__r-info {
+  width: calc(100% - 12.5rem);
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.resume__r-info .title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--purple-color);
+}
+
+.resume__r-info .com {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
+.resume__r-info .com a {
+  text-decoration: none;
+  color: #292b2f;
+}
+
+.resume__r-info .content {
+  margin-top: 1.5rem;
+}
+
+.resume__r-info::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: var(--purple-color);
+  border-radius: 50%;
+}
+
+.resume__r-info::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  width: 2px;
+  height: 90%;
+  background: var(--purple-color);
+}
+
+@media only screen and (max-width: 480px) {
+  .resume__r-date {
+    font-size: 1.8rem;
+  }
+
+  .resume__r-info .title {
+    font-size: 2rem;
+  }
+  
+  .resume__r-info .com {
+    font-size: 1.6rem;
+  }
+
+  .resume__r-info .content {
+    font-size: 1.8rem;
+  }
+
+  .resume__r-date {
+   font-size: 2rem;
+  }
+  
+}
